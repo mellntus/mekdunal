@@ -1,0 +1,39 @@
+/* Menu */
+.nav-home, .nav-menu{
+    font-size: x-large;
+}
+
+.nav-home a, .nav-menu a{
+    text-decoration: none;
+    color: grey;
+    transition: all .2s ease-in-out;
+}
+
+.nav-home a:hover, .nav-menu a:hover{
+    color: #A52A2A;
+}
+
+.nav-home span, .nav-menu span{
+    font-size: 17px;
+    margin-right: 5px;
+}
+
+.menu-paket-list a, .menu-burger-list a, .menu-ayam-list a, .menu-minuman-list a, .menu-snack-list{
+    text-decoration: none;
+    color: black;
+}
+
+/* Menu Detail */
+.menu-detail-image-header{
+    background-color: #FEF9EC;
+}
+
+.menu-detail-image{
+    text-align: center;
+}
+
+.menu-detail-caption h6{
+    font-weight: lighter;
+    margin-top: 20px;
+}
+

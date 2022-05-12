@@ -1,0 +1,180 @@
+:root{
+    --nero: #252525;
+    --dimGray: #666;
+    --max-red: #D62828;
+    --snow: #fafafa;
+    --Libre: 'Libre Franklin', sans-serif;
+    --Kaushan: 'Kaushan Script';
+    --transition: all 0.4s ease;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--Libre);
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    font-size: 1.05rem;
+    font-weight: 200;
+    text-rendering: optimizeLegibility;
+}
+
+.navbar, .footer{
+    background-color: #E9967A;
+}
+
+.navbar-brand{
+    font-size: xx-large;
+}
+
+#comp-name{
+    color: #F0E68C;
+}
+
+.picture-bg, #menu-favorit, #toko{
+    text-align: center;
+}
+
+/* .carousel-item img{
+    filter: blur(8px);
+} */
+
+.carousel-indicators [data-bs-target]{
+    background-color: #E9967A;
+}
+
+#h1{
+    color: #696969;
+    font-size: 40px;
+}
+
+#h2{
+    color: brown;
+}
+
+#btn-header, #btn-menu{
+    border-radius: 10px;
+    color: white;
+    background-color:brown;
+}
+
+/* .text-inside-image{
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translate(-55%, -160%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+} */
+
+#content-head .col p{
+    font-size: 1em;
+}
+
+#menu-home p{
+    font-size: 2em;
+    text-align: center;
+}
+
+.straight-line{
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    margin: 10px;
+    width: 60px;
+    height: 3px;
+    background: #E9967A;
+    border-radius: 5px;
+}
+
+.card a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: all .2s ease-in-out;
+}
+
+.card a:hover{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+#toko-title{
+    font-size: 2em;
+}
+
+#lokasi-toko .col{
+    text-align: left;
+}
+
+/* Footer */
+.footer{
+    margin-top: auto;
+}
+
+/* Other Menu */
+.other-menu p{
+    margin-bottom: 10px;
+}
+
+.other-menu ul{
+    list-style-type: none;
+    padding: 0%;
+}
+
+.other-menu li a{
+    text-decoration: none;
+    color: #6c757d;
+    transition: all .2s ease-in-out;
+}
+
+.other-menu-list li a:hover{
+    color: white;
+}
+
+/* Widget */
+.list-sosmed{
+    list-style: none;
+    padding-left: 0%;
+}
+
+.row-cols-sm-4{
+    width: 80%;
+}
+
+.widget-sosmed ul li i{
+    font-size: 25px;
+}
+
+/* Image Logo */
+.comp-image{
+    text-align: right;
+}
+
+.image-content img{
+    max-width: 100px;
+    border-radius:50%;
+}
+
+.copyright{
+    text-align: center;
+    bottom: 0;
+    background-color: #f3f3f3;
+    height: 30px;
+}
+
+.copyright .container{
+    background-color: #f3f3f3;
+}

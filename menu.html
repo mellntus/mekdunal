@@ -18,6 +18,23 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/menu.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        $.getJSON("data.json",function(data){
+            var items=[];
+            $.each(data, function(key, val){
+                items.push("<div class='col-md-4 text-center'>");
+                items.push("<a href=''><img src='pciture/"+val.picture+"' style='height:100px;'></a>");
+                items.push("<div class='product-bottom text-center'>");
+                items.push("<h3>"+val.nama+"</h3>");
+                items.push("<h4>"+val.price+"</h4>");
+                items.push("<h4'>"+val.detail+"</h4>");
+                items.push("</div>");
+                items.push("</div>");
+            });
+            $("<p/>",{"class":"row",html:items.join("")}).appendTo("#data");
+        });
+    </script>
 </head>
 <body>
     <!-- Navbar -->
@@ -39,6 +56,9 @@
             </div>
         </div>
     </nav>
+
+    <p id="data"></p>
+    
 
     <!-- Content -->
     <div class="menu-content">

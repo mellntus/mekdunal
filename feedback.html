@@ -18,6 +18,52 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/feedback.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="function.js"></script>
+    <script src="function.js"></script>
+    <script src="id.js"></script>
+    <script>
+      var operation = "A"; //"A"=Tambah; "E"=Edit
+      var selected_index = -1; //Index of the selected list item
+      var tbClients = localStorage.getItem("tbClients");//Ambil Data DAri Local Storage
+      
+      tbClients = JSON.parse(tbClients); //Converts string to object
+      if(tbClients == null) //Kalo data kosong, Inisialisasi Array Kosong
+          tbClients = [];
+          
+      $(document).ready(function(){
+          List();
+  
+          $("#btnSave").on("click",function(){
+              if(operation == "A")
+                  Add();
+              else
+                  Edit();	
+  
+              // alert(operation)	
+          }); 
+  
+          $(".btnEdit").on("click", function(){
+              operation = "E";
+              // selected_index = parseInt($(this).attr("alt").replace("Edit", ""));
+              selected_index = $(this).data("id")
+              var cli = JSON.parse(tbClients[selected_index]);
+              $("#txtID").val(cli.ID);
+              $("#txtName").val(cli.Name);
+              $("#txtPhone").val(cli.Phone);
+              $("#txtEmail").val(cli.Email);
+              $("#txtID").attr("readonly","readonly");
+              $("#txtName").focus();
+          }); 
+  
+          $(".btnDelete").on("click", function(){
+              // selected_index = parseInt($(this).attr("alt").replace("Delete", ""));
+              selected_index = $(this).data("id")
+              Delete();
+          }); 
+      })
+  </script>
+  </html>
 </head>
 <body>
     <!-- Navbar -->
@@ -57,17 +103,18 @@
         <!-- end of title -->
         <div class = "contact-row-1">
           <form class = "contact-form">
-            <input type = "text" class = "form-control" placeholder="Your Name">
-            <input type = "email" class = "form-control" placeholder="Your Email">
-            <textarea rows = "5" class = "form-control" placeholder="Message"></textarea>
-            <input type = "submit" class = "form-submit-btn" value = "send message">
+            <input class="form-control" type="text" placeholder= "your id" id="txtID"/>
+            <input type = "text" class = "form-control" placeholder="Your Name" id="txtName">
+            <input type = "email" class = "form-control" placeholder="Your Email" id="txtEmail">
+            <textarea rows = "5" class = "form-control" placeholder="Message" id="txtMessage"></textarea>
+            <input type = "submit" class = "form-submit-btn" value = "send message" id="btnSave">
           </form>
         </div>
     </div>
 
     <!-- View Kritik dan Saran Table -->
     <div class="container my-5 my-md-3">
-        <table class="table table-responsive table-hover border">
+        <table class="table table-responsive table-hover border" id="tblList">
             <thead>
                 <tr>
                   <th scope="col">#</th>
@@ -147,4 +194,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
+
+
 </html>

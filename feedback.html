@@ -52,6 +52,7 @@
               $("#txtName").val(cli.Name);
               $("#txtPhone").val(cli.Phone);
               $("#txtEmail").val(cli.Email);
+              $('#txtMessage').val(cli.Message);
               $("#txtID").attr("readonly","readonly");
               $("#txtName").focus();
           }); 
@@ -103,7 +104,7 @@
         <!-- end of title -->
         <div class = "contact-row-1">
           <form class = "contact-form">
-            <input class="form-control" type="text" placeholder= "your id" id="txtID"/>
+            <input class="form-control" type="text" placeholder= "Your ID" id="txtID"/>
             <input type = "text" class = "form-control" placeholder="Your Name" id="txtName">
             <input type = "email" class = "form-control" placeholder="Your Email" id="txtEmail">
             <textarea rows = "5" class = "form-control" placeholder="Message" id="txtMessage"></textarea>
@@ -117,35 +118,15 @@
         <table class="table table-responsive table-hover border" id="tblList">
             <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col" style="display: none;">ID</th>
                   <th scope="col">Name</th>
-                  <th scope="col">Email</th>
+                  <th scope="col" style="display: none;">Email</th>
                   <th scope="col">Message</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>Kami Gila Banget anjay parah banget sih ini gila banget parah</td>
-                  <td><a href=""><span class="material-icons mx-2">edit</span></a><a href=""><span class="material-icons">delete</span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>Kami Gila Banget anjay parah banget sih ini gila banget parah</td>
-                  <td><a href=""><span class="material-icons mx-2">edit</span></a><a href=""><span class="material-icons">delete</span></a></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry the Bird</td>
-                  <td>Wuhancuk</td>
-                  <td>Kami Gila Banget anjay parah banget sih ini gila banget parahtter</td>
-                  <td><a href=""><span class="material-icons mx-2">edit</span></a><a href=""><span class="material-icons">delete</span></a></td>
-                </tr>
+                
               </tbody>
           </table>
     </div>

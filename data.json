@@ -4,118 +4,152 @@
        "nama":"classic fried chicken",
        "price":"Rp. 25.000",
        "detail":"testttttt",
-       "picture":"ayam1.jpg"
+       "picture":"menu/ayam/ayam1.jpg",
+       "type":"ayam",
+       "favorit":"true"
     },
     {
         "id":"2",
         "nama":"chicken tender",
         "price":"Rp. 30.000",
         "detail":"testttttt",
-        "picture":"ayam2.jpg"
+        "picture":"menu/ayam/ayam2.jpg",
+        "type":"ayam",
+        "favorit":"false"
      },
      {
         "id":"3",
         "nama":"classic burger",
         "price":"Rp. 45.000",
         "detail":"testttttt",
-        "picture":"burger1.jpg"
+        "picture":"menu/burger/burger1.jpg",
+        "type":"burger",
+        "favorit":"true"
      },
      {
         "id":"4",
         "nama":"double patty burger",
         "price":"Rp. 50.000",
         "detail":"testttttt",
-        "picture":"burger2.jpg"
+        "picture":"menu/burger/burger2.jpg",
+        "type":"burger",
+        "favorit":"false"
      },
      {
         "id":"5",
         "nama":"extra mozza burger",
         "price":"Rp. 55.000",
         "detail":"testttttt",
-        "picture":"burger3.jpg"
+        "picture":"menu/burger/burger3.jpg",
+        "type":"burger",
+        "favorit":"false"
      },
      {
         "id":"6",
         "nama":"double cheese burger",
         "price":"Rp. 49.000",
         "detail":"testttttt",
-        "picture":"burger4.png"
+        "picture":"menu/burger/burger4.png",
+        "type":"burger",
+        "favorit":"true"
      },
      {
         "id":"7",
         "nama":"cola",
         "price":"Rp. 15.000",
         "detail":"testttttt",
-        "picture":"minuman1.jpg"
+        "picture":"menu/minuman/minuman1.jpg",
+        "type":"minuman",
+        "favorit":"false"
      },
      {
         "id":"8",
         "nama":"mineral water",
         "price":"Rp. 10.000",
         "detail":"testttttt",
-        "picture":"minuman2.jpg"
+        "picture":"menu/minuman/minuman2.jpg",
+        "type":"minuman",
+        "favorit":"false"
      },
      {
         "id":"9",
         "nama":"combo 1",
         "price":"Rp. 70.000",
         "detail":"testttttt",
-        "picture":"paket1.jpg"
+        "picture":"menu/paket/paket1.jpg",
+        "type":"paket",
+        "favorit":"true"
      },
      {
         "id":"10",
         "nama":"combo 2",
         "price":"Rp. 65.000",
         "detail":"testttttt",
-        "picture":"paekt2.jpg"
+        "picture":"menu/paket/paket2.jpg",
+        "type":"paket",
+        "favorit":"true"
      },
      {
         "id":"11",
         "nama":"combo 3",
         "price":"Rp. 47.000",
         "detail":"testttttt",
-        "picture":"paket3.jpg"
+        "picture":"menu/paket/paket3.jpg",
+        "type":"paket",
+        "favorit":"false"
      },
      {
         "id":"12",
         "nama":"mac n cheese",
         "price":"Rp. 20.000",
         "detail":"testttttt",
-        "picture":"snack1.jpg"
+        "picture":"menu/snack/snack1.jpg",
+        "type":"snack",
+        "favorit":"true"
      },
      {
         "id":"13",
         "nama":"ice cream sundae",
         "price":"Rp. 10.000",
         "detail":"testttttt",
-        "picture":"snack2.jpg"
+        "picture":"menu/snack/snack2.jpg",
+        "type":"snack",
+        "favorit":"true"
      },
      {
         "id":"14",
         "nama":"french fries",
         "price":"Rp. 15.000",
         "detail":"testttttt",
-        "picture":"snack3.jpg"
+        "picture":"menu/snack/snack3.jpg",
+        "type":"snack",
+        "favorit":"false"
      },
      {
         "id":"15",
         "nama":"onion ring",
         "price":"Rp. 15.000",
         "detail":"testttttt",
-        "picture":"snack4.jpg"
+        "picture":"menu/snack/snack4.jpg",
+        "type":"snack",
+        "favorit":"false"
      },
      {
-        "id":"1",
+        "id":"16",
         "nama":"chicken nugget",
         "price":"Rp. 15.000",
         "detail":"testttttt",
-        "picture":"snack5.jpg"
+        "picture":"menu/snack/snack5.jpg",
+        "type":"snack",
+        "favorit":"false"
      },
      {
-        "id":"1",
+        "id":"17",
         "nama":"chicken wings",
         "price":"Rp. 15.000",
         "detail":"testttttt",
-        "picture":"snack6.jpg"
+        "picture":"menu/snack/snack6.png",
+        "type":"snack",
+        "favorit":"false"
      }
 ]

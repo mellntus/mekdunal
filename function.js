@@ -56,30 +56,32 @@ function Clear()
 	$("#txtEmail").val('');
     $("#txtMessage").val('');
 	$("#txtID").prop("readonly",false);
+
+	location.reload(true);
 }
 function List(){		
-	$("#tblList").html("");
+	$("#tblList").html("").attr("class", "table table-responsive table-hover border");
 	$("#tblList").html(
 		"<thead>"+
 		"	<tr>"+
-		"	<th></th>"+
-		"	<th>ID</th>"+
-		"	<th>Name</th>"+
-		"	<th>Email</th>"+
-        "   <th>Message</th>"+
+		"	<th scope='col' style='display:none;'>ID</th>"+
+		"	<th scope='col'>Name</th>"+
+		"	<th scope='col' style='display:none;'>Email</th>"+
+        "   <th scope='col'>Message</th>"+
+		"	<th scope='col'>Action</th>"+
 		"	</tr>"+
 		"</thead>"+
-		"<tbody>"+
+		"<tbody style='overflow-wrap:anywhere;'>"+
 		"</tbody>"
 		);
 	for(var i in tbClients){
 		var cli = JSON.parse(tbClients[i]);
 	  	$("#tblList tbody").append("<tr>"+
-			"<td><img src='picture/edit.png' alt='Edit"+i+"' class='btnEdit' data-id='"+i+"' style='cursor:pointer'/><img src='picture/delete.png' alt='Delete"+i+"' class='btnDelete' data-id='"+i+"' style='cursor:pointer'/></td>" + 
-			"<td>"+cli.ID+"</td>" + 
+			"<td style='display:none'>"+cli.ID+"</td>" + 
 			"<td>"+cli.Name+"</td>" +  
-			"<td>"+cli.Email+"</td>" +
+			"<td style='display:none;'>"+cli.Email+"</td>" +
             "<td>"+cli.Message+"</td>" + 
+			"<td><a style='cursor: pointer;' class='btnEdit' alt='Edit"+i+"' data-id='"+i+"'><span class='material-icons mx-2'>edit</span></a><a style='cursor: pointer;' class='btnDelete' alt='Delete"+i+"' data-id='"+i+"'><span class='material-icons'>delete</span></a></td>" + 
 	  		"</tr>");
 	}
 } 

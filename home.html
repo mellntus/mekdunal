@@ -17,6 +17,7 @@
       rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="jquery-3.6.0.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -50,13 +51,13 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <a href="menu.html"><img src="picture/home1.png" class="d-block" width="100%" height="400px" alt="..."></a>
+                    <a href="menu.html"><img src="picture/home/home1.png" class="d-block" width="100%" height="400px" alt="..."></a>
                   </div>
                   <div class="carousel-item">
-                    <a href="menu.html"><img src="picture/home2.png" class="d-block" width="100%" height="400px" alt="..."></a>
+                    <a href="menu.html"><img src="picture/home/home2.png" class="d-block" width="100%" height="400px" alt="..."></a>
                   </div>
                   <div class="carousel-item">
-                    <a href="menu.html"><img src="picture/home3.png" class="d-block" width="100%" height="400px" alt="..."></a>
+                    <a href="menu.html"><img src="picture/home/home3.png" class="d-block" width="100%" height="400px" alt="..."></a>
                   </div>
                 </div>
               </div>
@@ -83,7 +84,7 @@
           </div>
         </div>
 
-        <!-- Menu List -->
+        <!-- Menu Favorit List -->
         <div class="menu-list py-3" id="menu-home" style="text-align: end;">
             <p><strong>Menu Favorit</strong></p>
             <div class="straight-line d-flex my-4">
@@ -91,67 +92,28 @@
               <span class="material-icons">restaurant</span>
               <div class="line"></div>
             </div>
-            <div class="row row-cols-1 row-cols-md-6 g-4" id="menu-favorit">
-                <div class="col">
-                  <div class="card border-1 mb-5 bg-body rounded">
-                    <a href="menu_detail.html">
-                      <img src="picture/foto1.jpg" class="card-img-top h-100" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>Pisang Goreng</strong></h5>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card border-1 mb-5 bg-body rounded">
-                    <a href="menu_detail.html">
-                      <img src="picture/foto1.jpg" class="card-img-top h-100" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>Liang Teh</strong></h5>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card border-1 mb-5 bg-body rounded">
-                    <a href="menu_detail.html">
-                      <img src="picture/foto1.jpg" class="card-img-top h-100" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>Kopi Coklat</strong></h5>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card border-1 mb-5 bg-body rounded">
-                    <a href="menu_detail.html">
-                      <img src="picture/foto1.jpg" class="card-img-top h-100" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>Ikan Goreng</strong></h5>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card border-1 mb-5 bg-body rounded">
-                    <a href="menu_detail.html">
-                      <img src="picture/foto1.jpg" class="card-img-top h-100" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>Toge Goreng</strong></h5>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card border-1 mb-5 bg-body rounded">
-                    <a href="menu_detail.html">
-                      <img src="picture/foto1.jpg" class="card-img-top h-100" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title"><strong>Tahu Goreng</strong></h5>
-                      </div>
-                    </a>
-                  </div>
-                </div>
+            <div class="menu-favorit-list" id="menu-favorit-list">
+              <script>
+                $.getJSON("data.json",function(data){
+                    var items=[];
+                    $.each(data, function(key, val){
+                        if(val.favorit == "true"){
+                            items.push("<div class='col' style='text-align:center;'>");
+                            items.push("<div class='card border-1 mb-5 bg-body rounded'>");
+                            items.push("<a href='menu_detail.html'>");
+                            items.push("<img src='picture/"+val.picture+"' class='card-img-top' height:'100%' alt='"+val.name+"'>");
+                            items.push("<div class='card-body'>");
+                            items.push("<h5 class='card-title'><strong>"+val.nama+"</strong></h5>");
+                            items.push("</div>");
+                            items.push("</a>");
+                            items.push("</div>");
+                            items.push("</div>");
+                        }
+                    });
+                    
+                    $("<div/>",{"class":"row row-cols-1 row-cols-md-4 g-4 py-md-4 justify-content-center",html:items.join("")}).appendTo("#menu-favorit-list");
+                });
+            </script>
             </div>
             <button type="button" class="btn btn-outline-danger" id="btn-menu">Lihat Semua Menu</button>
             <script>

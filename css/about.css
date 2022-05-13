@@ -1,25 +1,4 @@
-:root{
-    --nero: #252525;
-    --dimGray: #666;
-    --max-red: #D62828;
-    --snow: #fafafa;
-    --Libre: 'Libre Franklin', sans-serif;
-    --Kaushan: 'Kaushan Script';
-    --transition: all 0.4s ease;
-}
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: var(--Libre);
-}
-
-body{
-    line-height: 1.5;
-    font-size: 1.05rem;
-    font-weight: 200;
-    text-rendering: optimizeLegibility;
-}
+@import "style.css";
 
 /* setup &  resuable stylings */
 .team-img img{
@@ -55,6 +34,7 @@ body{
     position: relative;
     overflow: hidden;
 }
+
 .team-info{
     position: absolute;
     left: 0;
@@ -93,6 +73,7 @@ body{
 .team-info ul li a{
     color: #fff;
 }
+
 .team-item:hover .team-info{
     transform: translateY(0);
 }

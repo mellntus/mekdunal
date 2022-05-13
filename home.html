@@ -17,7 +17,7 @@
       rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="jquery-3.6.0.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -85,36 +85,46 @@
         </div>
 
         <!-- Menu Favorit List -->
-        <div class="menu-list py-3" id="menu-home" style="text-align: end;">
+        <div class="menu-list my-3" id="menu-home" style="text-align: end;">
+          <div class = "title">
             <p><strong>Menu Favorit</strong></p>
             <div class="straight-line d-flex my-4">
               <div class="line"></div>
               <span class="material-icons">restaurant</span>
               <div class="line"></div>
             </div>
+          </div>
             <div class="menu-favorit-list" id="menu-favorit-list">
-              <script>
-                $.getJSON("data.json",function(data){
-                    var items=[];
-                    $.each(data, function(key, val){
+                <script>
+                  $.getJSON("data.json",function(data){
+                      var items=[];
+                      $.each(data, function(key, val){
                         if(val.favorit == "true"){
-                            items.push("<div class='col' style='text-align:center;'>");
-                            items.push("<div class='card border-1 mb-5 bg-body rounded'>");
-                            items.push("<a href='menu_detail.html'>");
-                            items.push("<img src='picture/"+val.picture+"' class='card-img-top' height:'100%' alt='"+val.name+"'>");
-                            items.push("<div class='card-body'>");
-                            items.push("<h5 class='card-title'><strong>"+val.nama+"</strong></h5>");
+                          items.push("<div class = 'menu-fav-item'>");
+                          items.push("<div class = 'menu-fav-img'>");
+                          items.push("<img src='picture/"+val.picture+"' height='250px' alt='"+val.nama+"'>");
+                          items.push("<div class = 'menu-fav-info'>");
+                          items.push("<h3>"+val.nama+"</h3>");
+
+                          if(val.type == "paket"){
+                            items.push("<p class ='text px-3' style='font-size: x-small;'>"+val.detail+"</p>");
                             items.push("</div>");
-                            items.push("</a>");
                             items.push("</div>");
                             items.push("</div>");
-                        }
-                    });
-                    
-                    $("<div/>",{"class":"row row-cols-1 row-cols-md-4 g-4 py-md-4 justify-content-center",html:items.join("")}).appendTo("#menu-favorit-list");
-                });
-            </script>
-            </div>
+                          }else{
+                            items.push("</div>");
+                            items.push("</div>");
+                            items.push("</div>");
+                          }
+                          }
+  
+                      });
+
+                      $("<div/>",{"class":"menu-fav-row",html:items.join("")}).appendTo("#menu-favorit-list");
+                      
+                  });
+                </script>
+
             <button type="button" class="btn btn-outline-danger" id="btn-menu">Lihat Semua Menu</button>
             <script>
               btn_Menu = document.getElementById("btn-menu");
@@ -123,6 +133,7 @@
                 window.location.href = "menu.html";
               })
             </script>
+          </div>
         </div>
 
         <!-- Store -->

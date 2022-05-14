@@ -225,30 +225,30 @@ body{
 @media screen and (max-width: 480px){
     /* Home Carousel */
     #home1 img{
-        content: url("/picture/home/home1_480.png");
+        content: url("http://localhost:8080/MekDunal/picture/home/home1_480.png");
     }
 
     #home2 img{
-        content: url("/picture/home/home2_480.png");
+        content: url("http://localhost:8080/MekDunal/picture/home/home2_480.png");
     }
 
     #home3 img{
-        content: url("/picture/home/home3_480.png");
+        content: url("http://localhost:8080/MekDunal/picture/home/home3_480.png");
     }
 }
 
 @media screen and (min-width: 481px){
     /* Home Carousel */
     #home1 img{
-        content: url("/picture/home/home1.png");
+        content: url("http://localhost:8080/MekDunal/picture/home/home1.png");
     }
 
     #home2 img{
-        content: url("/picture/home/home2.png");
+        content: url("http://localhost:8080/MekDunal/picture/home/home2.png");
     }
 
     #home3 img{
-        content: url("/picture/home/home3.png");
+        content: url("http://localhost:8080/MekDunal/picture/home/home3.png");
     }
 }
 
@@ -269,15 +269,15 @@ body{
 
     /* Home Carousel */
     #home1 img{
-        content: url("/picture/home/home1.png");
+        content: url("http://localhost:8080/MekDunal/picture/home/home1.png");
     }
 
     #home2 img{
-        content: url("/picture/home/home2.png");
+        content: url("http://localhost:8080/MekDunal/picture/home/home2.png");
     }
 
     #home3 img{
-        content: url("/picture/home/home3.png");
+        content: url("http://localhost:8080/MekDunal/picture/home/home3.png");
     }
 
     /* Menu Fav */
